@@ -3,7 +3,6 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class GlobalState : MonoBehaviour {
 
 	public enum Difficulty {EASY, MEDIUM, HARD};
@@ -24,8 +23,6 @@ public class GlobalState : MonoBehaviour {
 	
 	}
 }
-
-
 
 public class DebugUtils
 {

@@ -17,7 +17,7 @@ public class InGameGUI : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GlobalState.GameState state = antBehaviour.CheckWinLose();
+		GlobalState.GameState state = GameObject.Find("GlobalState").GetComponent<GlobalState>().globalState;
 		switch (state) {
 		case GlobalState.GameState.LOST:
 			GUI.Box(new Rect(Screen.width/2 - 50, Screen.height/2 - 25, 100, 50), "YOU LOSE");
