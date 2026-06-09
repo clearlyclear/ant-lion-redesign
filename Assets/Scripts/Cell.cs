@@ -1,5 +1,3 @@
-// from https://github.com/zigurous/unity-minesweeper-tutorial
-
 using UnityEngine;
 
 public class Cell
@@ -7,7 +5,7 @@ public class Cell
     public enum Type
     {
         Empty,
-        Antlion,
+        Mine,
         Number,
     }
 
@@ -15,5 +13,7 @@ public class Cell
     public Type type;
     public int number;
     public bool revealed;
+    public bool flagged;
     public bool exploded;
+    public bool chorded;
 }

@@ -1,12 +1,3 @@
-// from https://github.com/zigurous/unity-minesweeper-tutorial
-
-/*
- * handles overall grid behaviour including:
- *      - grid initiation
- *      - adjacent cell calculation
- *      - generating revealed cell number labels
- */
-
 using UnityEngine;
 
 public class CellGrid
@@ -29,22 +20,12 @@ public class CellGrid
                 cells[x, y] = new Cell
                 {
                     position = new Vector3Int(x, y, 0),
-                    type = Cell.Type.Empty,
-                    number = 0,
-                    revealed = false,
-                    exploded = false
+                    type = Cell.Type.Empty
                 };
             }
         }
-
-        // hard coded map
-        SetAntlion(0, 1);
-
-        GenerateNumbers();
     }
 
-    /*
-    // for procedural generation
     public void GenerateMines(Cell startingCell, int amount)
     {
         int width = Width;
@@ -77,14 +58,6 @@ public class CellGrid
             cell.type = Cell.Type.Mine;
         }
     }
-    */
-
-    // manually set antlions (for now)
-    public void SetAntlion(int x, int y)
-    {
-        Cell cell = cells[x, y];
-        cell.type = Cell.Type.Antlion;
-    }
 
     public void GenerateNumbers()
     {
@@ -97,7 +70,7 @@ public class CellGrid
             {
                 Cell cell = cells[x, y];
 
-                if (cell.type == Cell.Type.Antlion) {
+                if (cell.type == Cell.Type.Mine) {
                     continue;
                 }
 
@@ -122,7 +95,31 @@ public class CellGrid
                 int x = cell.position.x + adjacentX;
                 int y = cell.position.y + adjacentY;
 
-                if (TryGetCell(x, y, out Cell adjacent) && adjacent.type == Cell.Type.Antlion) {
+                if (TryGetCell(x, y, out Cell adjacent) && adjacent.type == Cell.Type.Mine) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public int CountAdjacentFlags(Cell cell)
+    {
+        int count = 0;
+
+        for (int adjacentX = -1; adjacentX <= 1; adjacentX++)
+        {
+            for (int adjacentY = -1; adjacentY <= 1; adjacentY++)
+            {
+                if (adjacentX == 0 && adjacentY == 0) {
+                    continue;
+                }
+
+                int x = cell.position.x + adjacentX;
+                int y = cell.position.y + adjacentY;
+
+                if (TryGetCell(x, y, out Cell adjacent) && !adjacent.revealed && adjacent.flagged) {
                     count++;
                 }
             }
