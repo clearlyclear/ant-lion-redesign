@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &11150054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
   tileUnknown: {fileID: 11400000, guid: 0e11d2b659b3940e8ab556c898e9d734, type: 2}
   tileEmpty: {fileID: 11400000, guid: 3e951a53e8bee4280bc7daf151483920, type: 2}
   tileMine: {fileID: 11400000, guid: a19f57f8f7f7b4b11b4f71fa0595e5cf, type: 2}
-  tileExploded: {fileID: 11400000, guid: 8e8cd5f973c634a2384651473cbfee87, type: 2}
+  tileExploded: {fileID: 11400000, guid: a19f57f8f7f7b4b11b4f71fa0595e5cf, type: 2}
   tileFlag: {fileID: 11400000, guid: 0d5a86e63675d4edda2d21b1f409ddfb, type: 2}
   tileNum1: {fileID: 11400000, guid: cd5907f3f03f14712b0dd51b9010da6c, type: 2}
   tileNum2: {fileID: 11400000, guid: 7a40d298f37f54f3e97897f568b1e1bb, type: 2}
@@ -1873,8 +1873,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278215680
-  m_fontColor: {r: 0, g: 0.3921569, b: 0, a: 1}
+    rgba: 4278255561
+  m_fontColor: {r: 0.7887689, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2404,8 +2404,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4203462620351479870, guid: 7ce6d7bef224e47518c707bb618e46b0, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 3502870411904718311, guid: db1b9e295c6e14c9aa614657b311df99, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
