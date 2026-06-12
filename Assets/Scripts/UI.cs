@@ -52,7 +52,7 @@ public class UI : MonoBehaviour
 
     public void HardMode()
     {
-        game.SetDifficulty(24, 24, 60, 1);
+        game.SetDifficulty(20, 20, 60, 1);
         StartGame();
     }
 

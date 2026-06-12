@@ -12,25 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: TileMine
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: -8692730412011628294, guid: 34bb00c57e80b4708b67924c597f2250, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2db002d9e1911124da30ade80e124f91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
-    e00: 3
+    e00: 1
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 3
+    e11: 1
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 3
+    e22: 1
     e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
   m_InstancedGameObject: {fileID: 0}
-  m_Flags: 3
+  m_Flags: 1
   m_ColliderType: 1
